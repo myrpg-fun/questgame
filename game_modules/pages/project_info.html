@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <title>{{project.name}} - игра MyRPG.fun</title>
+    <link rel="icon" type="image/png" href="/i/favicon.png">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/zz.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/j/index.tpl.js"></script>
+    <script src="/js/scheme/collection.js"></script>
+    <script src="/js/scheme/field.js"></script>
+    <script src="/js/scheme/modal.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            var socket = io.connect();
+            var auth = new Authorization(socket);
+            var Modal = new ModalDialog($('#modal'));
+            
+            authDOMinit(auth, Modal);
+            
+            $('.startproject').click(function(){
+                if (auth.get('authorized')){
+                    return true;
+                }else{
+                    $('a[href="/login"]').click();
+                    
+                    return false;
+                }
+            });
+        });
+    </script>
+  </head>
+  <body>
+    {% include "parts/header.html" with {'page':'idx'} %}
+    <div class="page-content background-index"  style="background-image:url({{project.thumb}})">
+            <div class="width800">
+                <h1 class="game-title">
+                    {{project.name}}
+                </h1>
+            </div>
+            <div class="background-info-white">
+                <div class="width800">
+                    <div class="info-content">
+                        <p>{{project.infoescaped|raw|replace({"\n":'</p><p>'})}}</p>
+                    </div>
+                    {% if (project.genre)%}<div class="info-short">
+                        Жанр:&emsp;<span class="color-blue info-lighter">{{project.genre}}</span>
+                    </div>{% endif %}
+                    {% if (project.location)%}<div class="info-short">
+                        Где:&emsp;<span class="color-blue info-lighter">{{project.location}}</span>
+                    </div>{% endif %}
+                    {% if (project.gametype)%}<div class="info-short">
+                        Формат:&emsp;<span class="color-blue info-lighter">{{project.gametype}}</span>
+                    </div>{% endif %}
+                    {% if (project.difficulty)%}<div class="info-short">
+                        Сложность:&emsp;<span class="color-blue info-lighter">{{project.difficulty}}</span>
+                    </div>{% endif %}
+                    {% if (project.lengthinfo)%}<div class="info-short">
+                        Длительность:&emsp;<span class="color-blue info-lighter">{{project.lengthinfo}}</span>
+                    </div>{% endif %}
+                    {% if (project.authors)%}<div class="info-short">
+                        Авторы игры:&emsp;<span class="color-blue info-lighter">{{project.authors|nl2br}}</span>
+                    </div>{% endif %}
+                </div>
+            </div>
+        <div class="row no-gutter no-space">
+                <a href="{% if user %}/project/{{ id }}/start{% else %}#{% endif %}" class="col-50 tablet-25 startproject">
+                    <span class="project">
+                        <span class="create black">
+                            <i class="icon ion-power"></i>
+                            <span>Начать новую игру</span>
+                        </span>
+                    </span>
+                </a>{% for prg in sessions %}<a href="/s/{{ prg.id }}" class="col-50 tablet-25">
+                    <span class="project {% if prg.user_id %}user{% endif %}">
+                        <span class="stats">
+                            <span class="stats-info">
+                            {{ prg.info|nl2br }}
+                            </span>
+                        </span>
+                    </span>
+                </a>{% endfor %}
+        </div>
+
+    </div>
+    {% include "parts/account.html" %}
+    <div id="modal" class="modal hidden"></div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+    <script type="text/html" id="CounterAddAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Добавить значение счётчику <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-fcountername">Выбрать счётчик</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-fcounter"></span></div>
+            <div class="blk-field"><span class="label">Условие</span><select class="blki-operator">
+                <option value="+">+ Добавить</option>
+                <option value="-">- Вычесть</option>
+                <option value="/">&divide; Разделить</option>
+                <option value="*">&times; Умножить</option>
+                <option value="pow">^ Степень</option>
+            </select></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter">Значение</span><input type="text" class="blki-counter counter" />
+                <span class="label long blki-countername object">Выбрать счётчик</span><span class="link link-counter"></span>
+            </div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="CounterSetAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Установить значение счётчику <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-fcountername">Выбрать счётчик</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-fcounter"></span></div>
+            <div class="blk-field"><span class="label long">= </span><input type="text" class="blki-counter" /></div>
+            <div class="blk-classfields"></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="CounterRandomAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Установить случайное значение <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-fcountername">Выбрать счётчик</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-fcounter"></span></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter">От 0 до</span><input type="text" class="blki-counter counter" />
+                <span class="label long object">От 0 до</span> <span class="label long blki-countername object">Выбрать счётчик</span><span class="link link-counter"></span>
+            </div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="CounterTestAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Сравнить значение счётчика <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-fcountername">Выбрать счётчик</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-fcounter"></span></div>
+            <div class="blk-field"><span class="label">Условие</span><select class="blki-test">
+                <option value="=">= Равно</option>
+                <option value=">">&gt; Больше</option>
+                <option value="<">&lt; Меньше</option>
+                <option value=">=">&ge; Больше или равно</option>
+                <option value="<=">&le; Меньше или равно</option>
+                <option value="!=">&ne; Не Равно</option>
+            </select></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter">Значение</span><input type="text" class="blki-counter counter" />
+                <span class="label long blki-countername object">Выбрать счётчик</span><span class="link link-counter"></span>
+            </div>
+            <div class="blk-field"><span class="label long">Да</span><span class="link link-yes"></span></div>
+            <div class="blk-field"><span class="label long">Нет</span><span class="link link-no"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="CounterEachAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Повторить действия <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter">Кол-во раз</span><input type="text" class="blki-counter counter" />
+                <span class="label long blki-countername object">Выбрать кол-во</span><span class="link link-counter"></span>
+            </div>
+            <div class="blk-field"><span class="label long">Повторить действия</span><span class="link link-action"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>

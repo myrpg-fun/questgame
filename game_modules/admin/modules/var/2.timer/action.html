@@ -1,0 +1,56 @@
+    <script type="text/html" id="TimerAddAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Добавить значение таймеру <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-timername">Выбрать таймер</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-timer"></span></div>
+            <div class="blk-field"><span class="label">Условие</span><select class="blki-operator">
+                <option value="+">+ Добавить</option>
+                <option value="-">- Вычесть</option>
+            </select></div>
+            <div class="blk-field"><span class="label">Время</span><input type="time" class="blki-set" step="1" /></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="TimerSetAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Установить таймер <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-timername">Выбрать таймер</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-timer"></span></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter">Время</span><input type="time" class="blki-set counter" step="1" />
+                <span class="label long blki-ftimername object">Выбрать счётчик</span><span class="link link-ftimer"></span>
+            </div>
+            <div class="blk-field"></div>
+            <div class="blk-field"><span class="label">Запустить</span><span class="switcher blki-start"><span class="switch-label"></span></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="TimerStopAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Остановить таймер <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-timername">Выбрать таймер</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-timer"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="TimerStartAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Запустить таймер <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-timername">Выбрать таймер</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-timer"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="TimerDummyStartAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Запустить таймер <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label">Время</span><input type="time" class="blki-set" step="1" /></div>
+            <div class="blk-field"><span class="label long">Действие по окончанию времени</span><span class="link link-action"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="TimerIsActiveAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Таймер активен? <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-timername">Выбрать таймер</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-timer"></span></div>
+            <div class="blk-field"><span class="label long">Да</span><span class="link link-yes"></span></div>
+            <div class="blk-field"><span class="label long">Нет</span><span class="link link-no"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>

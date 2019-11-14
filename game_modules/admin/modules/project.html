@@ -1,0 +1,89 @@
+    <script type="text/html" id="ProjectEditBlockTpl">
+        <div class="blk-block big-size">
+            <div class="blk-field"><span class="label long">Название проекта</span></div>
+            <div class="blk-field"><input type="text" class="blki-name long header" /></div>
+            <div class="blk-errors"></div>
+            <div class="blk-field">
+                <button class="link-release btn">Опубликовать</button>
+                <button class="link-test btn">Протестировать</button>
+                <button class="link-delete btn red">Удалить</button>
+            </div>
+        </div>
+        <div class="blk-block big-size">
+            <div class="blk-field"><span class="label long">Картинка фона (1280x800)</span><span class="link link-image"></span></div>
+            <div class="blk-field"><img class="blki-image pointer" /></div>
+            <div class="blk-field"><span class="label long">Описание</span></div>
+            <div class="blk-field"><textarea class="blki-info full"></textarea></div>
+            <div class="blk-field"><span class="label">Формат</span><select class="blki-gametype">
+                <option value="walkingquest">Прогулочный квест / приключение</option>
+                <option value="strategy">Стратегия</option>
+                <option value="survival">Игра на выживание</option>
+                <option value="cooperative">Совместная игра</option>
+                <option value="competitive">Соревновательная / спортивная игра</option>
+                <option value="economic">Экономическая игра</option>
+                <option value="rpg">Ролевая игра</option>
+                <option value="autochallenge">Игра для автомобилистов</option>
+            </select></div>
+            <div class="blk-field"><span class="label">Жанр</span><input type="text" class="blki-genre" /></div>
+            <div class="blk-field"><span class="label">Где</span><input type="text" class="blki-location" /></div>
+            <div class="blk-field"><span class="label">Сложность</span><input type="text" class="blki-difficulty" /></div>
+            <div class="blk-field"><span class="label">Длительность</span><input type="text" class="blki-lengthinfo" /></div>
+            <div class="blk-field"><span class="label long">Авторы игры</span></div>
+            <div class="blk-field"><textarea class="blki-authors full"></textarea></div>
+        </div>
+        <input class="blki-upload" type="file" name="uploadfiles[]" accept="" style="display:none" />
+    </script>
+    <script type="text/html" id="ProjectRemoveModalTpl">
+        <div class="blk-block big-size">
+            <div class="blk-header red action">Вы хотите удалить проект?</div>
+            <div class="blk-field"><span class="label long">Введите ваш пароль для удаления проекта:</span></div>
+            <div class="blk-field"><input type="password" class="blki-password long header" /></div>
+            <div class="blk-space"></div>
+            <div class="blk-field">
+                <button class="link-delete btn red">Удалить</button>
+                <button class="link-cancel btn">Отмена</button>
+            </div>
+            <div class="blk-footer"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ProjectReleaseModalTpl">
+        <div class="blk-block big-size">
+            <div class="blk-header green">Опубликовать проект</div>
+            <div class="blk-field yellow"></div>
+            <div class="blk-field"><span class="label">Версия</span><input type="text" class="blki-version" /></div>
+            <div class="blk-field"><span class="label">Доступ</span><select class="blki-shared">
+                <option value="open">Общий доступ</option>
+                <option value="shared">По ссылке</option>
+                <option value="private">Закрыть доступ</option>
+                <option value="merge">Обновить сессии проекта</option>
+            </select></div>
+            <div class="blk-field"><span class="label">Ссылка на проект</span><input type="text" class="blki-linkprj" readonly onclick="this.select()" style="color: blue" /></div>
+            <div class="blk-space"></div>
+            <div class="blk-field">
+                <button class="link-release btn">Опубликовать</button>
+                <button class="link-cancel btn red">Отмена</button>
+            </div>
+            <div class="blk-footer"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ProjectModuleTpl">
+        <div class="blk-module">
+            <div class="blki-name"></div>
+            <div class="blki-info"></div>
+            <div class="blk-price">
+                <span class="blki-price"></span> <span>руб</span>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="ProjectSubModulesTpl">
+        <div class="blki-col"></div>
+    </script>
+    <script type="text/html" id="ProjectModuleCollectionTpl">
+        <div class="blk-modules-header blk-field">
+            <span class="blki-title"></span> <span class="switcher blki-active"><span class="switch-label"></span></span>
+        </div>
+        <div class="blki-col"></div>
+    </script>
+    <script type="text/html" id="ProjectModulesTpl">
+        <div class="blki-col blk-modules"></div>
+    </script>

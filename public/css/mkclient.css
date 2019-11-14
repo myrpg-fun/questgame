@@ -1,0 +1,161 @@
+body{
+    font-family: Roboto, Noto, Helvetica, Arial, sans-serif;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+.icon{
+    font-size:24px;
+}
+.tabs.h100{
+    height: 100%;
+    background: #f0f0f0;
+}
+
+.picker-modal{
+    height: auto;
+    max-height: 30%;
+    overflow: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+iframe{vertical-align: bottom}
+
+.toolbar-maxwidth{
+    position: relative;
+    max-width: 800px;
+    height: 100%;
+    margin: 0px auto;
+}
+
+.tabbar-label{
+    text-transform: none;
+    font-size: 12px;
+}
+.icon .badge {
+    margin-left: -5px;
+}
+
+.inventory-info{
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.inventory-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.inventory-padding{
+    padding: 16px;
+}
+
+.inventory-padding-w{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.inventory-border{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.inventory-note{
+    display: block;
+    padding: 16px 16px 16px 16px;
+    /* background-color: rgba(255, 193, 7, 0.14); */
+    background-color: rgb(255, 248, 225);
+    color: #607d8b;
+    font-style: italic;
+    text-indent: 16px;
+}
+
+.inventory-width, .width800{
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+.inventory-slot{
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    text-align: right;
+    position: relative;
+    margin: 4px;
+    line-height: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    background: white;
+    min-width: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.inventory-slot img{
+    width: 100%;
+}
+
+.inventory-slot .inventory-count{
+    position: absolute;
+    font-size: 10px;
+    bottom: 2px;
+    right: 2px;
+}
+
+.inventory-empty{
+    background: #e0e0e0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.24), 0 -2px 2px rgba(255,255,255,0.4) inset, 0 2px 4px rgba(0,0,0,0.12) inset;
+}
+
+.inventory-bg{
+    background: #f0f0f0;
+}
+
+.inventory-bg-light, .background-light{
+    background: #fdfdfd;
+}
+
+.img-width{
+    max-width: 100%;
+}
+
+.task-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.task-item{
+    position: relative;
+    margin: 13px 0px;
+}
+
+.task-item .icon{
+    position: absolute;
+    line-height: 1;
+    left: 0px;
+    top: -4px;
+}
+
+.task-item .task-info{
+    font-size: 16px;
+    position: relative;
+    display: block;
+    padding-left: 32px;
+    line-height: 1.1;
+}
+
+.task-item .task-counter, .task-item .task-timer{
+    font-size: 11px;
+    position: relative;
+    display: block;
+    padding-left: 32px;
+    line-height: 1.3;
+}
+
+.task-item .icon{color: #c0c0c0}
+.task-item .task-info{color: #303030}
+.task-item.failed .icon{color: #e91e63}
+.task-item.failed .task-info{color: #8e123b}
+.task-item.complete .icon{color: #2196f3}
+.task-item.complete .task-info{color: #b0b0b0}

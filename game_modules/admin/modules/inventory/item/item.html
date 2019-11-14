@@ -1,0 +1,33 @@
+    <script type="text/html" id="InventoryItem">
+        <div class="blk-block">
+            <div class="blk-header green">Предмет <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label">Имя</span><input type="text" class="blki-name" /></div>
+            <div class="blk-field"><span class="label">Размер</span><input type="text" class="short blki-x" /><span class="label long">x</span><input type="text" class="short blki-y" /></div>
+            <div class="blk-field"><span class="label">Лимит в клетке</span><input type="text" class="blki-max" /></div>
+            <div class="blk-field"><span class="label long blki-group">Группы</span><span class="link link-group"></span></div>
+            <div class="blk-field"><span class="label">Иконка</span><span class="blk-iconbox"><span class="blki-icon"></span></span><span class="link link-icon"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="InventoryItemEmpty">
+        <div class="blk-block">
+            <div class="blk-header green">Пустая клетка</div>
+            <div class="blk-field"><span class="label">Имя</span><input type="text" class="blki-name" /></div>
+            <div class="blk-field"><img class="blki-icon pointer" /></div>
+        </div>
+    </script>
+    <script type="text/html" id="InventoryItemSelectBlock">
+        <div class="blk-block-item">
+            <div class="blk-field"><span class="blk-iconbox sm-icon"><span class="blki-icon"></span></span><span class="blki-name"></span><span class="link link-open"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="InventoryEmptyItemSelectBlock">
+        <div class="blk-block-item">
+            <div class="blk-field"><img class="blki-icon sm-icon" /><span class="blki-name"></span><span class="link link-open"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="InventoryItemIcon">
+        <div class="blk-item link item-outline"><span class="blk-iconbox sm-icon"><span class="blki-icon"></span></span><input class="blki-count item-count" /></div>
+    </script>
+    <script type="text/html" id="InventoryItemIconEmpty">
+        <div class="blk-item link"><img class="blki-icon" src="/admin/empty.png" /><input class="hide blki-count item-count" /></div>
+    </script>

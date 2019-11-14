@@ -1,0 +1,82 @@
+    <script type="text/html" id="InventoryRandomSelectAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Выбрать предметы <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-inventoryname">Выбрать инвентарь</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-inventory"></span></div>
+            <div class="blk-field"><span class="label long">Учитывать количество</span> <span class="switcher blki-useall"><span class="switch-label"></span></span></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter long">Кол-во элементов</span> <input type="text" class="blki-count counter short" />
+                <span class="label long object-all"><em>Выбрать все предметы</em></span>
+                <span class="label long blki-countname object">Выбрать счётчик</span><span class="link link-count"></span>
+            </div>
+            <div class="blk-field"><span class="label long">Действия в выборке</span><span class="link link-action"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="InventoryAddItemAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Добавить предмет в инвентарь <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-inventoryname">Выбрать инвентарь</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-inventory"></span></div>
+            <div class="blk-field"><span class="label long blki-itemname">Выбрать предмет</span><span class="edit link-editit"><i class="icon ion-compose"></i></span><span class="link link-item"></span></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter">Количество</span><input type="text" class="blki-counter counter" />
+                <span class="label long blki-countername object">Выбрать счётчик</span><span class="link link-counter"></span>
+            </div>
+            <div class="blk-field"><span class="label long">Добавление успешно</span><span class="link link-yes"></span></div>
+            <div class="blk-field"><span class="label long">Места нет</span><span class="link link-no"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="InventoryTestItemAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Проверить предмет в инвентаре <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-inventoryname">Выбрать инвентарь</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-inventory"></span></div>
+            <div class="blk-field"><span class="label long blki-itemname">Выбрать предмет</span><span class="edit link-editit"><i class="icon ion-compose"></i></span><span class="link link-item"></span></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter">Количество</span><input type="text" class="blki-counter counter" />
+                <span class="label long blki-countername object">Выбрать счётчик</span><span class="link link-counter"></span>
+            </div>
+            <div class="blk-field"><span class="label long">Предмет в инвентаре</span><span class="link link-yes"></span></div>
+            <div class="blk-field"><span class="label long">Предмета нет</span><span class="link link-no"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="InventoryRemoveItemAction">
+        <div class="blk-block sortable">
+            <div class="blk-help">
+                <h5>Удалить предмет из инвентаря</h5>
+                <p>Удалить <strong>предмет</strong> из <strong>инвентаря</strong>.</p>
+                <p>Вы задаёте <strong>инвентарь</strong>, <strong>предмет</strong> и его <strong>количество</strong> которое необходимо удалить.</p>
+                <p>Количество может быть -1. В этом случае удалятся все указанные предметы.</p>
+            </div>
+            <div class="blk-header red action">Удалить предмет из инвентаря <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-inventoryname">Выбрать инвентарь</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-inventory"></span></div>
+            <div class="blk-field"><span class="label long blki-itemname">Выбрать предмет</span><span class="edit link-editit"><i class="icon ion-compose"></i></span><span class="link link-item"></span></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label counter">Количество</span><input type="text" class="blki-counter counter" />
+                <span class="label long blki-countername object">Выбрать счётчик</span><span class="link link-counter"></span>
+            </div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="InventoryItemSetIconAction">
+        <div class="blk-block sortable">
+            <div class="blk-help">
+                <h5>Установить иконку предмету</h5>
+                <p>Установить иконку <strong>предмету</strong>.</p>
+                <p>Вы задаёте <strong>новую иконку</strong> для предмета.</p>
+                <p>Вы можете группировать <strong>иконки</strong> составляя для предмета с помощью параметра <strong>добавить</strong>. В этом случае, <strong>иконка</strong> добавится поверх.</p>
+            </div>
+            <div class="blk-header red action">Установить иконку предмету <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <span class="blk-hint">Предмет</span>
+            <div class="blk-field"><span class="label long blki-objectname">Выбрать предмет</span><span class="link link-object"></span></div>
+            <div class="blk-field blk-ctrfld">
+                <span class="label icon">Иконка</span><span class="blk-iconbox pointer"><span class="blki-icon"></span></span>
+                <span class="blk-hint object">Иконка</span>
+                <span class="label long blki-iconname object">Выбрать иконку</span>
+                <span class="link link-icon"></span>
+            </div>
+            <div class="blk-field"><span class="label long">Новый слой</span> <span class="switcher blki-add"><span class="switch-label"></span></span> <span class="label long">добавить сверху</span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    

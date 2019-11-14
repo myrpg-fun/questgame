@@ -1,0 +1,1090 @@
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* -------- */
+/* F7 ЦВЕТА */	
+/* -------- */
+
+/* ------------------------------------ http://hex.colorrrs.com/ */
+
+/* #f44336; /* material-red */
+/* #e91e63; /* material-pink */					/* rgba(233,30,99,1) */
+/* #9c27b0; /* material-purple */
+/* #673ab7; /* material-deeppurple */
+/* #3f51b5; /* material-indigo */
+/* #2196f3; /* material-blue */					/* rgba(33,150,243,1) */
+/* #03a9f4; /* material-lightblue */
+/* #00bcd4; /* material-cyan */
+/* #009688; /* material-teal */
+/* #4caf50; /* material-green */
+/* #8bc34a; /* material-lightgreen */
+/* #cddc39; /* material-lime */
+/* #ffeb3b; /* material-yellow */
+/* #ffc107; /* material-amber */				/* rgba(255,193,7,1) */
+/* #ff9800; /* material-orange */				/* rgba(255,152,0,1) */
+/* #ff5722; /* material-deeporange */
+/* #795548; /* material-brown */
+/* #9e9e9e; /* material-gray */					/* rgba(158,158,158,1) */
+/* #607d8b; /* material-bluegray */
+/* #ffffff; /* material-white */
+/* #000000; /* material-black */
+
+/* #6d6d6d; /* f7-checkbox-blank-gray */
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+body {
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------------- */
+/* Созданные классы */
+/* ---------------- */
+
+/* Класс убирающий padding-top */
+.no-padding-top {
+	padding-top: 0;
+}
+
+/* -------------------------------------------------- */
+
+/* Изображение */
+.mk-image {
+	padding-bottom: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+/* Соотношения сторон для изображений: */
+
+/* 2:3 */
+.mk-image.image-2x3 {
+	padding-bottom: 66.6%;
+}
+
+/* 3:5 */
+.mk-image.image-3x5 {
+	padding-bottom: 60%;
+}
+
+/* 1:2 */
+.mk-image.image-1x2 {
+	padding-bottom: 50%;
+}
+
+/* 2:5 */
+.mk-image.image-2x5 {
+	padding-bottom: 40%;
+}
+
+/* 1:3 */
+.mk-image.image-1x3 {
+	padding-bottom: 33.3%;
+}
+
+/* 1:4 */
+.mk-image.image-1x4 {
+	padding-bottom: 25%;
+}
+
+/* 1:5 */
+.mk-image.image-1x5 {
+	padding-bottom: 20%;
+}
+
+/* 1:10 */
+.mk-image.image-1x10 {
+	padding-bottom: 10%;
+}
+
+/* 1:20 */
+.mk-image.image-1x20 {
+	padding-bottom: 5%;
+}
+
+/* ----------------------------- */
+/* Общие настройки для элементов */
+/* ----------------------------- */
+
+/* Делаем white-space: normal вместо nowrap для серых заголовков */
+.content-block-title {
+  white-space: normal;
+}
+
+/* Делаем white-space: normal вместо nowrap для заголовков в списках */
+.list-block .item-title {
+  white-space: normal;
+}
+
+/* Делаем white-space: normal вместо nowrap для подзаголовков в media-list */
+.list-block .item-subtitle{
+	white-space: normal;
+}
+
+/* Выключаем uppercase текста для кнопок */
+.button {
+	text-transform: none;
+}
+
+/* Выключаем uppercase текста для табов */
+.tabbar a.tab-link {
+	text-transform: none;
+}
+
+/* ------------ */
+/* Общие ИКОНКИ */ 
+/* ------------ */
+
+/*  */
+i.icon.icon-create {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/create.svg");
+	-webkit-mask-image: url("../img/create.svg");
+}
+
+/*  */
+i.icon.icon-security {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/security.svg");
+	-webkit-mask-image: url("../img/security.svg");
+}
+
+i.icon.icon-star-half {
+  width: 24px;
+  height: 24px;
+	background-color: #9e9e9e; /* material-gray */
+	mask-image: url("../img/star-half.svg");
+	-webkit-mask-image: url("../img/star-half.svg");
+}
+
+i.icon.icon-star-border {
+  width: 24px;
+  height: 24px;
+	background-color: #9e9e9e; /* material-gray */
+	mask-image: url("../img/star-border.svg");
+	-webkit-mask-image: url("../img/star-border.svg");
+}
+
+i.icon.icon-signal {
+  width: 24px;
+  height: 24px;
+	background-color: #9e9e9e; /* material-gray */
+	mask-image: url("../img/signal.svg");
+	-webkit-mask-image: url("../img/signal.svg");
+}
+
+/* --------------------- */
+/* Неиспользуемые ИКОНКИ */ 
+/* --------------------- */
+
+/* Иконка «Время» */
+i.icon.icon-time {
+  width: 24px;
+  height: 24px;
+  background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/time.svg");
+	-webkit-mask-image: url("../img/time.svg");
+}
+
+/* Иконка «Таймер» */
+i.icon.icon-timer {
+  width: 24px;
+  height: 24px;
+  background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/timer.svg");
+	-webkit-mask-image: url("../img/timer.svg");
+}
+
+/* Иконка «Промежуток времени» */
+i.icon.icon-timelapse {
+  width: 24px;
+  height: 24px;
+  background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/timelapse.svg");
+	-webkit-mask-image: url("../img/timelapse.svg");
+}
+
+/* Иконка «Знак вопроса с контуром» */
+i.icon.icon-faq-outline {
+  width: 24px;
+  height: 24px;
+  background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/faq-outline.svg");
+	-webkit-mask-image: url("../img/faq-outline.svg");
+}
+
+/* Иконка «Знак вопроса» без всего */
+i.icon.icon-faq-alt {
+  width: 24px;
+  height: 24px;
+  background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/faq-alt.svg");
+	-webkit-mask-image: url("../img/faq-alt.svg");
+}
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* ---- */
+/* МЕНЮ */
+/* ---- */
+
+/* */
+
+/* --------------- */
+/* ИКОНКИ ДЛЯ МЕНЮ */
+/* --------------- */
+
+/* Аккаунт / Профиль */
+
+/* Аккаунт — квадрат */
+
+
+/* Аккаунт — круг */
+
+/* Активный квест */
+
+/* Сообщения */
+i.icon.icon-messages {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/messages.svg");
+	-webkit-mask-image: url("../img/messages.svg");
+}
+
+/* Задания */
+i.icon.icon-tasks {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/tasks.svg");
+	-webkit-mask-image: url("../img/tasks.svg");
+}
+/* Инвентарь */
+i.icon.icon-inventory {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/inventory.svg");
+	-webkit-mask-image: url("../img/inventory.svg");
+}
+/* Инвентарь альтернативный*/
+i.icon.icon-inventory-alt {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/inventory-alt.svg");
+	-webkit-mask-image: url("../img/inventory-alt.svg");
+}
+/* Карта */
+i.icon.icon-map {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/map.svg");
+	-webkit-mask-image: url("../img/map.svg");
+}
+
+/* Меню */
+
+/* Квесты */
+i.icon.icon-quests {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/quests.svg");
+	-webkit-mask-image: url("../img/quests.svg");
+}
+
+/* Профиль */
+i.icon.icon-profile {
+  width: 100%;
+  height: 0;
+	padding-bottom: 100%;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/profile.svg");
+	-webkit-mask-image: url("../img/profile.svg");
+	mask-size: cover;
+  -webkit-mask-size: cover;
+}
+
+/* Аккаунт — квадрат */
+i.icon.icon-account-box {
+  width: 100%;
+  height: 0;
+	padding-bottom: 100%;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/account-box.svg");
+	-webkit-mask-image: url("../img/account-box.svg");
+	mask-size: cover;
+  -webkit-mask-size: cover;
+}
+
+/* Аккаунт — круг */
+i.icon.icon-account-circle {
+  width: 100%;
+  height: 0;
+	padding-bottom: 100%;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/account-circle.svg");
+	-webkit-mask-image: url("../img/account-circle.svg");
+	mask-size: cover;
+  -webkit-mask-size: cover;
+}
+
+/* Настройки */
+i.icon.icon-settings {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/settings.svg");
+	-webkit-mask-image: url("../img/settings.svg");
+}
+/* Справка */
+i.icon.icon-faq {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+ 	mask-image: url("../img/faq.svg");
+	-webkit-mask-image: url("../img/faq.svg");
+}
+/* Контакты */
+i.icon.icon-contacts {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/contacts.svg");
+	-webkit-mask-image: url("../img/contacts.svg");
+}
+/* Выход */
+i.icon.icon-exit {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/exit.svg");
+	-webkit-mask-image: url("../img/exit.svg");
+}
+
+/*  */
+i.icon.icon-list-check {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/list-check.svg");
+	-webkit-mask-image: url("../img/list-check.svg");
+}
+
+/*  */
+i.icon.icon-grid-3x3 {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/grid-3x3.svg");
+	-webkit-mask-image: url("../img/grid-3x3.svg");
+}
+
+/*  */
+i.icon.icon-bubble {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/bubble.svg");
+	-webkit-mask-image: url("../img/bubble.svg");
+}
+
+/*  */
+i.icon.icon-check {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/check.svg");
+	-webkit-mask-image: url("../img/check.svg");
+}
+
+/*  */
+i.icon.icon-textsms {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/textsms.svg");
+	-webkit-mask-image: url("../img/textsms.svg");
+}
+
+/*  */
+i.icon.icon-message {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/message.svg");
+	-webkit-mask-image: url("../img/message.svg");
+}
+
+/*  */
+i.icon.icon-checkcircle {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/checkcircle.svg");
+	-webkit-mask-image: url("../img/checkcircle.svg");
+}
+
+/*  */
+i.icon.icon-power {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/power.svg");
+	-webkit-mask-image: url("../img/power.svg");
+}
+
+/*  */
+i.icon.icon-star {
+  width: 24px;
+  height: 24px;
+	background-color: #9e9e9e; /* material-gray */
+	mask-image: url("../img/star.svg");
+	-webkit-mask-image: url("../img/star.svg");
+}
+
+/*  */
+i.icon.icon-announcement {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/announcement.svg");
+	-webkit-mask-image: url("../img/announcement.svg");
+}
+
+/*  */
+i.icon.icon-chat {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/chat.svg");
+	-webkit-mask-image: url("../img/chat.svg");
+}
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* ------- */
+/* ЗАДАНИЯ */
+/* ------- */
+
+/* «Время на квест:» */
+#tasks-timer-quest {
+	
+}
+
+/* «Название этапа» */
+#tasks-title {
+	padding-top: 0;
+}
+
+/* «Время на этап:» */
+#tasks-time-stage {
+	padding-top: 0;
+}
+
+/* «Цели:» */
+#tasks-goals {
+	padding-top: 0;
+}
+
+/* -------------------------------------------------- */
+
+/* «Подсказки:» */
+#tasks-hints {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+/* «Цена:» */
+#tasks-price {
+	padding-top: 0;
+	margin-top: 0;
+	text-align: right;
+	padding-right: 26px;	/* Отступ = расстояние от края до badget */
+}
+
+/* «В наличии:» */
+#tasks-wallet {
+	padding-top: 0;
+	text-align: right;
+	padding-right: 26px;		/* Отступ = расстояние от края до badget */
+	/* white-space: pre-wrap; /* pre-wrap, чтобы понаставить пробелов ;( */
+}
+
+/* ------------------ */
+/* ИКОНКИ ДЛЯ ЗАДАНИЯ */ 
+/* ------------------ */
+
+/* -------------------------------------------------- */
+
+/* Иконка «Будильник» */
+i.icon.icon-alarm {
+  width: 24px;
+  height: 24px;
+  background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/alarm.svg");
+	-webkit-mask-image: url("../img/alarm.svg");
+}
+
+/* -------------------------------------------------- */
+
+/* Чекбокс «Цель выполнена» */
+i.icon.icon-checkbox {
+  width: 24px;
+  height: 24px;
+  background-color: #4caf50; /* material-green */
+	mask-image: url("../img/checkbox.svg");
+	-webkit-mask-image: url("../img/checkbox.svg");
+}
+
+/* Чекбокс «Цель не выполнена» */
+i.icon.icon-checkbox-blank {
+  width: 24px;
+  height: 24px;
+  background-color: #6d6d6d; /* f7-checkbox-blank-gray */
+	mask-image: url("../img/checkbox-blank.svg");
+	-webkit-mask-image: url("../img/checkbox-blank.svg");
+}
+
+/* Иконка «Лупа» */
+i.icon.icon-magnifier {
+  width: 24px;
+  height: 24px;
+  background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/magnifier.svg");
+	-webkit-mask-image: url("../img/magnifier.svg");
+}
+
+/* -------------------------------------------------- */
+
+/* Подсказка «Открытое письмо» */
+i.icon.icon-email-open {
+  width: 24px;
+  height: 24px;
+  background-color: #4caf50; /* material-green */
+	mask-image: url("../img/email-open.svg");
+	-webkit-mask-image: url("../img/email-open.svg");
+}
+
+/* Подсказка «Закрытое письмо» */
+i.icon.icon-email {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/email.svg");
+	-webkit-mask-image: url("../img/email.svg");
+}
+
+/* -------------------------------------------------- */
+
+/* Иконка «Призрак» */
+i.icon.icon-ghost {
+  width: 24px;
+  height: 24px;
+  background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/ghost.svg");
+	-webkit-mask-image: url("../img/ghost.svg");
+}
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* --------- */
+/* ИНВЕНТАРЬ */
+/* --------- */
+
+.inventory-row {
+	min-width: 200px;
+	max-width: 500px;
+	justify-content: center;
+	margin-top: 32px;
+}
+
+.inventory-slot {
+	width: 20%;
+  height: 0;
+  padding-bottom: 20%;
+	text-align: right;
+	position: relative;
+	margin: 4px;
+	line-height: inherit;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.inventory-select {
+	outline: 1px;
+	outline-style: dashed;
+	outline-color: #e91e63; /* material-pink */
+	outline-offset: -1px;
+}
+
+.inventory-slot-image {
+	width: 100%;
+}
+
+.inventory-info {
+	font-size: 10px;
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+}
+
+.inventory-name {
+	justify-content: center;
+	text-align: center
+}
+
+inventory-note {
+	display: block;
+	padding: 16px 16px 16px 16px;
+	/* background-color: rgba(255, 193, 7, 0.14); */
+	background-color: rgb(255, 248, 225);
+	color: #607d8b; /* material-bluegray */
+	font-style: italic;
+	text-indent: 16px;
+}
+
+inventory-greenscreen {
+	display: block;
+	padding: 16px 16px 16px 16px;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: #4caf50; /* material-green */ /* ??? */
+	color: #8bc34a; /* material-lightgreen */
+	font-style: none;
+	text-indent: 16px;
+}
+
+decor-speech {
+	color: #2196f3; /* material-blue */
+	font-style: italic;
+	padding-right: 1pc;
+}
+
+/* -------------------------------------------------- */
+
+.inventory-slot-alt {
+	width: 20%;
+  height: 0;
+  padding-bottom: 20%;
+	border: 1px solid #ddd;
+	text-align: right;
+	position: relative;
+	margin: 4px;
+}
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* ----- */
+/* КАРТА */
+/* ----- */
+
+/* */
+
+/* ---------------- */
+/* ИКОНКИ ДЛЯ КАРТА */
+/* ---------------- */
+
+/* Моё местоположение */
+i.icon.icon-mylocation {
+  width: 24px;
+  height: 24px;
+	background-color: #ffffff; /* material-white */
+	mask-image: url("../img/mylocation.svg");
+	-webkit-mask-image: url("../img/mylocation.svg");
+}
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* ------ */
+/* ДИАЛОГ */
+/* ------ */
+
+/* */
+#dialogue-image {
+	width: 100%;
+	margin-top: 12px;
+	margin-bottom: -7px;
+}
+
+/* ----------------- */
+/* ИКОНКИ ДЛЯ ДИАЛОГ */
+/* ----------------- */
+
+/* */
+i.icon.icon-checkbox-indeterminate {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/checkbox-indeterminate.svg");
+	-webkit-mask-image: url("../img/checkbox-indeterminate.svg");
+}
+
+/* Вариант ответа номер 1 */
+i.icon.icon-one {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/one.svg");
+	-webkit-mask-image: url("../img/one.svg");
+}
+
+/* Вариант ответа номер 2 */
+i.icon.icon-two {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/two.svg");
+	-webkit-mask-image: url("../img/two.svg");
+}
+
+/* Вариант ответа номер 3 */
+i.icon.icon-three {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/three.svg");
+	-webkit-mask-image: url("../img/three.svg");
+}
+
+/* Иконка «Замок» для ввода пароля */
+i.icon.icon-lock {
+  width: 24px;
+  height: 24px;
+	background-color: #2196f3; /* material-blue */
+	mask-image: url("../img/lock.svg");
+	-webkit-mask-image: url("../img/lock.svg");
+}
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* Иконка «Автомобиль» */
+i.icon.icon-car {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/car.svg");
+	-webkit-mask-image: url("../img/car.svg");
+}
+
+i.icon.icon-walk {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/walk.svg");
+	-webkit-mask-image: url("../img/walk.svg");
+}
+
+i.icon.icon-checkbox-blank-circle {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/checkbox-blank-circle.svg");
+	-webkit-mask-image: url("../img/checkbox-blank-circle.svg");
+}
+
+i.icon.icon-description {
+  width: 24px;
+  height: 24px;
+	background-color: #e91e63; /* material-pink */
+	mask-image: url("../img/description.svg");
+	-webkit-mask-image: url("../img/description.svg");
+}
+
+/* ------- */
+/* СПРАВКА */
+/* ------- */
+
+/* */
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* ---------------------- */
+/* ЛОГИН / СТРАНИЦА ВХОДА */
+/* ---------------------- */
+
+/* */
+#login-welcome{
+	justify-content: center;
+}
+
+
+#logo-map {
+	width: 64px;
+	height: 64px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	mask-border: 0px solid #000;
+	display: block;
+	z-index: 3;
+}
+
+#logo-map-white {
+	width: 72px;
+	height: 72px;
+	background-color: #fff;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	mask-border: 0px solid #000;
+	display: block;
+	z-index: 2;
+	top: -67px;
+}
+
+#logo-settings {
+	width: 100px;
+	height: 100px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	mask-border: 0px solid #000;
+	display: block;
+	z-index: 1;
+	top: -158px;
+}
+
+/* --------------------------------- */
+/* ИКОНКИ ДЛЯ ЛОГИН / РЕГИСТРАЦИЯ */
+/* --------------------------------- */
+
+/* Иконка Email контур */
+i.icon.icon-email-outline {
+  width: 24px;
+  height: 24px;
+	background-color: #6d6d6d; /* f7-checkbox-blank-gray */
+	mask-image: url("../img/email-outline.svg");
+	-webkit-mask-image: url("../img/email-outline.svg");
+}
+
+/* Иконка «Замок» контур */
+i.icon.icon-lock-outline {
+  width: 24px;
+  height: 24px;
+	background-color: #6d6d6d; /* f7-checkbox-blank-gray */
+	mask-image: url("../img/lock-outline.svg");
+	-webkit-mask-image: url("../img/lock-outline.svg");
+}
+
+/* Иконка «Бабл» контур */
+i.icon.icon-bubble-outline {
+	width: 24px;
+  height: 24px;
+	background-color: #6d6d6d; /* f7-checkbox-blank-gray */
+	mask-image: url("../img/bubble-outline.svg");
+	-webkit-mask-image: url("../img/bubble-outline.svg");
+}
+
+/* =========================================================================== */
+/* =========================================================================== */
+
+i.icon.icon-checkbox-fill {
+	width: 24px;
+	height: 24px;
+	background-color: #6d6d6d; /* f7-checkbox-blank-gray */
+	mask-image: url(/img/checkbox-fill.svg);
+	-webkit-mask-image: url(/img/checkbox-fill.svg);
+}
+
+i.icon.icon-email-outline.color-pink,
+i.icon.icon-lock-outline.color-pink,
+i.icon.icon-bubble-outline.color-pink,
+i.icon.icon-checkbox.color-pink,
+i.icon.icon-checkbox-fill.color-pink,
+i.icon.icon-faq-outline.color-pink,
+i.icon.icon-star.color-pink,
+i.icon.icon-star-half.color-pink,
+i.icon.icon-star-border.color-pink {
+	background-color: #e91e63; /* material-pink */
+}
+
+i.icon.icon-email-outline.color-blue,
+i.icon.icon-lock-outline.color-blue,
+i.icon.icon-bubble-outline.color-blue,
+i.icon.icon-checkbox.color-blue,
+i.icon.icon-checkbox-fill.color-blue,
+i.icon.icon-star.color-blue,
+i.icon.icon-star-half.color-blue,
+i.icon.icon-star-border.color-blue {
+	background-color: #2196f3; /* material-blue */
+}
+
+i.icon.icon-checkbox.color-green,
+i.icon.icon-checkbox-fill.color-green {
+	background-color: #4caf50; /* material-green */
+}
+
+i.icon.icon-lock.color-darkgray,
+i.icon.icon-lock-outline.color-darkgray,
+i.icon.icon-email.color-darkgray,
+i.icon.icon-email-outline.color-darkgray {
+	background-color: #757575;
+}
+
+i.icon.icon-star-half.color-pink {
+	
+}
+
+#phone1 {
+	height: 0;
+	padding-bottom: 80%;
+	background-color: #ffc107; /* material-amber */
+	mask: url(/img/contacts.svg) no-repeat 100% 100%;
+	-webkit-mask: url(/img/contacts.svg) no-repeat 50% 50%;
+	mask-size: cover;
+  -webkit-mask-size: ;
+}
+
+#phone11 {
+	height: 0;
+	padding-bottom: 80%;
+	background-color: #ffc107; /* material-amber */
+	mask: url(/img/settings.svg) no-repeat 100% 100%;
+	-webkit-mask: url(/img/settings.svg) no-repeat 50% 50%;
+	mask-size: cover;
+	-webkit-mask-size: ;
+
+}
+
+#phone2 {
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	background-color: #ff9800; /* material-orange */
+	mask: url(/img/contacts.svg) no-repeat 100% 100%;
+	-webkit-mask: url(/img/contacts.svg) no-repeat 100% 100%;
+	mask-size: cover;
+  -webkit-mask-size: cover;
+}
+
+#phone3 {
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	background-color: #ff5722; /* material-deeporange */
+	mask: url(/img/contacts.svg) no-repeat 100% 100%;
+	-webkit-mask: url(/img/contacts.svg) no-repeat 100% 100%;
+	mask-size: cover;
+  -webkit-mask-size: cover;
+}
+
+#email1 {
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	background-color: #607d8b; /* material-bluegray */
+	mask: url(/img/email.svg) no-repeat 100% 100%;
+	-webkit-mask: url(/img/email.svg) no-repeat 100% 100%;
+	mask-size: cover;
+  -webkit-mask-size: cover;
+}
+
+/* #ffc107; /* material-amber */
+/* #ff9800; /* material-orange */
+/* #ff5722; /* material-deeporange */
+
+/*  */
+
+/* =========================================================================== */
+
+/* ----------------- */
+/* РАЗДЕЛЕНИЕ ЭКРАНА */
+/* ----------------- */
+
+/* Your app custom files in this file */
+.view-left {
+  border-right: 1px solid #b2b2b2;
+}
+
+/* This will fix flicker navbar in left panel view 
+.panel-left .page-content {
+  padding: 0;
+}
+
+.panel-left .page {
+  margin-top: 0px;
+  padding-bottom: 0px;
+}
+
+.panel-left .navbar {
+  position: relative;
+  margin-bottom: 0px;
+}
+
+/* Because we have panels-overlay inside of .views we need to fix its open position for right panel */
+body.with-panel-right-reveal .panel-overlay {
+  margin-left: 0;
+}
+
+/* iPad ВЕРТИКАЛЬНАЯ | ПОРТРЕТНАЯ ОРИЕНТАЦИЯ */
+@media (min-width: 569px) {
+	
+  .panel.panel-left.panel-cover {
+    width: 320px;
+    left: -320px;
+  }
+  
+	body.with-panel-left-cover .panel-left {
+    -webkit-transform: translate3d(320px, 0, 0);
+    -ms-transform: translate3d(320px, 0, 0);
+    transform: translate3d(320px, 0, 0);
+	}
+}
+
+/* iPad ГОРИЗОНТАЛЬНАЯ | АЛЬБОМНАЯ ОРИЕНТАЦИЯ */
+@media (min-width: 769px) {
+	
+	.panel.panel-left.panel-cover {
+		left: 0;
+		width: 320px;
+		display: block;
+		
+		/*border-right-width: 1px;
+		border-right-style: solid;
+		border-right-color: rgba(0, 0, 0, 0.12);*/
+		
+		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  }
+	
+	/* Убираем затемнение */
+	/* Исправление бага: при открытом меню и растягивании экрана до Split View затемнение не даёт нажать ни на одну кнопку */
+	.panel-overlay {
+		visibility: hidden;
+	}
+	
+	body.with-panel-left-cover .panel-left {
+		transform: translate3d(0px, 0, 0);
+    -ms-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+  }
+	
+	.view-main {
+		float: right;
+    width: -webkit-calc(100% - 320px);
+    width: -moz-calc(100% - 320px);
+    width: -ms-calc(100% - 320px);
+    width: calc(100% - 320px);
+  }
+	
+  /* Прячем «гамбургер», когда боковая панель открыта */
+  .view-main .navbar .open-panel {
+    display: none;
+  }
+}
+
+/* =========================================================================== */

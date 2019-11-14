@@ -1,0 +1,23 @@
+    <div class="page-content account hide">
+        <div class="account-rows">
+            <div class="account-cell">
+                <i class="icon ion-android-sync"></i>
+                <span class="tabbar-label">Сменить пароль</span>
+            </div>
+            <div class="account-cell">
+                <i class="icon ion-monitor"></i>
+                <span class="tabbar-label">Полноэкранный режим</span>
+            </div>
+            <div class="account-cell logout">
+                <i class="icon ion-log-out"></i>
+                <span class="tabbar-label">Выйти</span>
+            </div>
+        </div>
+        <div class="row no-gutter no-space">
+            {% for prg in usess %}<a href="/s/{{ prg.session_id }}" class="col-50 tablet-25">
+                <span class="project">
+                    <span class="mg"><span class="remove-session" data-id="{{ prg.session_id }}">X</span><span class="image" style="background-image:url({{ prg.thumb }})"></span></span><span class="title">{{ prg.name }}</span>
+                </span>
+            </a>{% endfor %}
+        </div>
+    </div>

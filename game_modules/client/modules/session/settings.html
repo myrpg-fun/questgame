@@ -1,0 +1,55 @@
+    <script type="text/html" id="SessionSettingMap">
+        <div class="blk-padding blk-bg-black">
+            <div class="blk-header">Место проведения игры</div>
+        </div>
+        <div class="blk-padding1 blk-bg-black">
+            <div class="blk-map"></div>
+        </div>
+    </script>
+    <script type="text/html" id="SessionSettingText">
+        <div class="blk-padding blk-bg-black">
+            <div class="blk-info blk-text fsize-medium"></div>
+        </div>
+    </script>
+    <script type="text/html" id="SessionSettingName">
+        <div class="blk-padding blk-bg-black">
+            <div class="blk-header writeonly">Название игры</div>
+            <div class="blk-field writeonly"><input class="blki-name header-name" /></div>
+            <div class="blk-header readonly blk-name"></div>
+        </div>
+    </script>
+    <script type="text/html" id="SessionSettingCounter">
+        <div class="blk-padding blk-bg-black">
+            <div class="blk-header writeonly blk-name"></div>
+            <div class="blk-field writeonly"><input class="blki-current" /></div>
+            <div class="blk-text fsize-header readonly"><span class="blk-name"></span>: <span class="blk-current"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="SessionSettingTimer">
+        <div class="blk-padding blk-bg-black">
+            <div class="blk-header writeonly">Выбор времени старта игры</div>
+            <div class="blk-field writeonly">Дата: <input class="blki-date" type="date" /> Время: <input class="blki-time" type="time" step="60" /></div>
+            <div class="blk-text fsize-header readonly">Игра начнётся <span class="blk-date"></span> в <span class="blk-time"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="SessionSettingSetupField">
+        <div class="blk-settings writeonly"></div>
+        <div class="blk-margin"><button class="btn link-save red btn-width50">Запустить новую игру</button><button class="btn link-cancel btn-width50">Отмена</button></div>
+    </script>
+    <script type="text/html" id="SessionSettingJoinField">
+        <div class="blk-settings readonly"></div>
+        <div class="blk-margin">
+            <button class="btn link-join red btn-width50">Присоединиться к игре</button>
+            <button class="btn link-cancel btn-width50">Отмена</button>
+        </div>
+    </script>
+    <script type="text/html" id="SessionSettingDenied">
+        <div class="blk-settings readonly"></div>
+        <div class="blk-margin">
+        <div class="blk-padding blk-bg-black">
+            <div class="blk-header">Нельзя присоедениться к данной сессии</div>
+            <button class="btn link-cancel">Отмена</button>
+        </div>
+        </div>
+    </script>
+    

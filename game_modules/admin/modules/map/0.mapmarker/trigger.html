@@ -1,0 +1,81 @@
+    <script type="text/html" id="MapMarkerTriggerStart">
+        <div class="blk-block sortable">
+            <div class="blk-header blue action">Точка создана <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></div>
+            <div class="blk-field"><span class="label long">Действия при создании</span><span class="link link-open"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="MapMarkerTriggerPlayerWalk">
+        <div class="blk-block sortable">
+            <div class="blk-header blue action">Игрок переместился <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></div>
+            <div class="blk-field"><span class="label long">Действия при перемещении</span><span class="link link-open"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="MapMarkerTriggerNear">
+        <div class="blk-block sortable">
+            <div class="blk-header blue action">Игрок приблизился к точке <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></div>
+            <div class="blk-help">
+                <h5>Триггер при приближению игрока к точке</h5>
+                <p>Когда игрок приближается к точке на заданное <strong>расcтояние</strong> (радиус в метрах), триггер вызывает <strong>действия</strong>, заданные вами.</p>
+                <p>Выходя из радиуса, игрок активирует триггер на <strong>действия</strong>, когда игрок вышел.</p>
+                <p><strong>Важно:</strong> если игрок не заходил в радиус точки (при инициализации, например), триггер выхода из радиуса вызван не будет.</p>
+            </div>
+            <span class="blk-hint">Коллекция игроков</span>
+            <div class="blk-field"><span class="label long blki-group">Коллекции</span><span class="link link-group"></span></div>
+            <div class="blk-field"><span class="label">Расстояние</span><input type="text" class="blki-radius" /></div>
+            <div class="blk-field"><span class="label long">Когда игрок ближе</span><span class="link link-near"></span></div>
+            <div class="blk-field"><span class="label long">Когда игрок дальше</span><span class="link link-far"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="MapMarkerTriggerNearMapMarker">
+        <div class="blk-block sortable">
+            <div class="blk-header blue action">Точка приблизилась к точке <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></div>
+            <div class="blk-help">
+                <h5>Триггер при приближению точки к точке</h5>
+                <p>Когда точка приближается к точке на заданное <strong>расcтояние</strong> (радиус в метрах), триггер вызывает <strong>действия</strong>, заданные вами.</p>
+                <p>Выходя из радиуса, точка активирует триггер на <strong>действия</strong>, когда игрок вышел.</p>
+                <p><strong>Важно:</strong> если точка не находилась в радиусе точки (при инициализации, например), триггер выхода из радиуса вызван не будет.</p>
+            </div>
+            <span class="blk-hint">Коллекция точек</span>
+            <div class="blk-field"><span class="label long blki-group">Коллекции</span><span class="link link-group"></span></div>
+            <div class="blk-field"><span class="label">Расстояние</span><input type="text" class="blki-radius" /></div>
+            <div class="blk-field"><span class="label long">Когда точка ближе</span><span class="link link-near"></span></div>
+            <div class="blk-field"><span class="label long">Когда точка дальше</span><span class="link link-far"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="MapMarkerTriggerActive">
+        <div class="blk-block sortable">
+            <div class="blk-header blue action">Активация объекта <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></div>
+            <div class="blk-help">
+                <h5>Триггер при активации точки</h5>
+                <p>В зависимости от заданных вами <strong>условий</strong>, если точка была активирована или деактивирована, вызывает <strong>действия</strong>, заданные вами.</p>
+            </div>
+            <div class="blk-field"><span class="label long">Действия при изменении</span><span class="link link-open"></span></div>
+            <div class="blk-field"><span class="label long">Деактивирован</span> <span class="switcher blki-active"><span class="switch-label"></span></span> <span class="label long">Активирован</span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="MapMarkerTriggerClick">
+        <div class="blk-block sortable">
+            <div class="blk-help">
+                <h5>Триггер при клике игроком точки</h5>
+                <p>Когда игрок кликает по точке, триггер вызывает <strong>действия</strong>, заданные вами. Игрок может кликнуть только по видимой им точке.</p>
+            </div>
+            <div class="blk-header blue action">Клик на объект <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></div>
+            <div class="blk-field"><span class="label long">Действия при нажатии</span><span class="link link-open"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="MapMarkerTriggerMove">
+        <div class="blk-block sortable">
+            <div class="blk-help">
+                <h5>Триггер по завершению перемещения точки</h5>
+                <p>Когда точка переместилась на указанное вами расстояние (в действии перемещении точки), триггер вызывает <strong>действия</strong>, заданные вами.</p>
+                <p>Триггер срабатывает не только когда точка добралась до конечного пункта, но и во время прохождения заданного расстояния.</p>
+            </div>
+            <div class="blk-header blue action">Точка переместилась <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></div>
+            <div class="blk-field"><span class="label long">Действия после перемещения</span><span class="link link-open"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>

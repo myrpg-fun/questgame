@@ -1,0 +1,13 @@
+{
+    "googlekey": "AIzaSyBtzRNiUtD8IK74gMgCoPsI-Uu5zuEdOkQ",
+    "googleserverkey": "AIzaSyBWEWJM1L3L0mz81oiX85lEe0wgTgF4Fqg",
+    "mysql": {
+        "host"     : "127.0.0.1",
+        "user"     : "root",
+        "password" : "",
+        "database": "mkquest"
+    },
+    "host": "algart.local",
+    "port": 3000,
+    "imagic": "C:\\Program Files\\ImageMagick\\magick.exe"
+}

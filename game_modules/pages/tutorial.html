@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <title>Что такое "Мастер ролевых игр"?</title>
+    <link rel="icon" type="image/png" href="/i/favicon.png">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/zz.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/j/index.tpl.js"></script>
+    <script src="/js/scheme/collection.js"></script>
+    <script src="/js/scheme/field.js"></script>
+    <script src="/js/scheme/modal.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            var socket = io.connect();
+            var auth = new Authorization(socket);
+            var Modal = new ModalDialog($('#modal'));
+            
+            authDOMinit(auth, Modal);
+            
+            $('.tut-header').click(function(){
+                $('.tut-header.selected').next().find('iframe').each(function(){
+                    var iframe = this.contentWindow;
+                    iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+                
+                if ($(this).hasClass('selected')){
+                    $(this).removeClass('selected');
+                }else{
+                    $('.tut-header.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                    
+                    $(this).next().find('iframe').each(function(){
+                        var iframe = this.contentWindow;
+                        $(this).load(function(){
+                            iframe.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                        });
+                        iframe.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                    });
+                }
+            });
+        });
+    </script>
+  </head>
+  <body>
+    {% include "parts/header.html" with {'page':'tutorial'} %}
+    <div class="page-content background-index2">
+        <div class="width800">
+            <h1 class="game-title">
+                О проекте <span>"Мастер ролевых игр"</span>
+            </h1>
+        </div>
+        <div class="background-info-white2">
+            <h2 class="tut-title">
+                Что такое "Мастер ролевых игр"?
+            </h2>
+            <div class="tut-header no-link">
+                <p>Это игровой движок помогающий в создании и проведении городских и ролевых игр.</p>
+                <p>С его помощью любой желающий может за короткий срок создать игровое приложение для iOS, Android телефонов с поддержкой GPS (системы определения местонахождения игрока в городе).</p>
+                <p>Создание и проведение игр на движке полностью бесплатно. Для этого необходимо зарегистрироваться и в меню "создать игру" создать "новый проект".</p>
+                <p>Проект сейчас находится в альфа-тестовом режиме. По любым вопросам о создании игр, можно обратиться в <a href="https://discord.gg/EHkfayg" target="_blank">Дискорд</a>. </p>
+            </div>
+            <h2 class="tut-title">
+                Что умеет "Мастер ролевых игр"?
+            </h2>
+            <div class="tut-header selected">
+                1. <span>Диалоговая система</span>
+            </div>
+            <div class="tut-link">
+                <p>Редактор даёт возможность создавать простые диалоги с персонажами. А так же сложные системы ветвлений, учитывающие предыдущие выборы игрока или его параметры.</p>
+                <p>Например, можно создавать интересные диалоговые игры (даже без карты).</p>
+                <p>В диалогах можно вставлять картинки, таймер (оставшееся время до события), выполнение заданий, вывод параметров, работу с инвентарем, кнопки и тексты.</p>
+            </div>
+            <div class="tut-header">
+                2. <span>Создавать события на карте города, зависящие от местоположения игрока</span>
+            </div>
+            <div class="tut-link">
+                <p>Игрок, используя GPS перемещается по городу и взаимодействует с игровыми объектами и зонами на карте.</p>
+                <p>Приближение к объекту, клик на объект, удаление от объекта или зоны может быть использованно для создания различных игровых ситуаций.</p>
+                <p>Объекты и зоны могут появляться и исчезать как для всех игроков, так и для каждого игрока в отдельности.</p>
+                <p>Напримет, найти караван, движущийся по маршруту, по которому игрок должен будет его выследить. Или убежать от зомби. Или встретиться с вороном в заданном месте.</p>
+            </div>
+            <div class="tut-header">
+                3. <span>Сканирование QR-кодов</span>
+            </div>
+            <div class="tut-link">
+                <p>Это возможность взаимодействия online игры с реальными вещами.</p>
+                <p>Нахождение определенного места (на котором краской нанесен QR-код).</p>
+                <p>Передача настоящих предметов от игрока к игроку (с уникальными QR-чипами). Сканирование QR-кода, как возможность взять предмет.</p>
+                <p>Возможость регистрации в игру только по "QR-пропускам". Получение информации о игроке по его "QR-пасспорту".</p>
+            </div>
+            <div class="tut-header">
+                4. <span>Создание предметов и работа с инвентарем</span>
+            </div>
+            <div class="tut-link">
+                <p>Можно создавать предметы, чтобы игроки в процессе игры ими обменивались друг с другом или находили их в процессе игры.</p>
+                <p>Предметы могут содержать полезную игровую информацию (письмо, например), использоваться для проверки выполнения задания (предмет есть или его нет), усиливать персонажа.</p>
+                <p>`Предметами` могут быть представленны и уникальные способности игроков, которым игрок обучается в процессе игры.</p>
+            </div>
+            <div class="tut-header">
+                5. <span>Создание событий по времени</span>
+            </div>
+            <div class="tut-link">
+                <p>Таймеры используются для создания событий по времени.</p>
+                <p>Например, для использования временных эффектов воздействия на игрока или для переодического обновления предметов в тайниках.</p>
+            </div>
+            <div class="tut-header">
+                <p>6. <span>Анимация и многослойные картинки</span></p>
+            </div>
+            <div class="tut-link">
+                <p>Картинки предметов и точек на карте могут анимироваться.</p>
+                <p>Анимация может использоваться для создания эффектов при определенных событиях (например взрыв на карте) или быть циклической (пузырьки в бутылке).</p>
+                <p>Так же можно использовать многослойные составные картинки для предметов и точек на карте.</p>
+                <p>Например, обозначая захваченную цель или различный фон у предметов.</p>
+            </div>
+            <div class="tut-header">
+                <p>7. <span>Работа со звуками</span></p>
+            </div>
+            <div class="tut-link">
+                <p>Звуковые эффекты при открытии или закрытии диалогов.</p>
+                <p>Использование звуков при приближеннии игрока к определенной местности на карте.</p>
+                <p>Например, счётчик гейзера может "фонить" при приближении к определенным зонам, сообщая игроку таким образом о радиактивной зоне.</p>
+            </div>
+            <h2 class="tut-title">
+                Какие игры можно создавать с помощью "Мастера ролевых игр"?
+            </h2>
+            <div class="tut-header">
+                1. <span>Прогулочные квесты</span>
+            </div>
+            <div class="tut-link">
+                <p>Продуманные игры с сюжетом и прогулкой по городу на 1 игрока. В процессе прогулки игрок выполняет задания. Например, успеть прийти в определенную точку или решить загадку. Таким образом игрок постепенно влияет на развитие сюжета, узнавая новые подробности истории.</p>
+            </div>
+            <div class="tut-header">
+                2. <span>Соревновательные игры</span>
+            </div>
+            <div class="tut-link">
+                <p>Игры на несколько человек или на несколько команд с определенными условиями для победы. Игры могут быть на выживание, поиск предметов, решения головоломок.</p>
+                <p>Примером такой игры может быть игра на выживание, где необходимо убегать от зомби и искать припасы в течении нескольких дней.</p>
+            </div>
+            <div class="tut-header">
+                3. <span>Ролевые игры</span>
+            </div>
+            <div class="tut-link">
+                <p>Более сложный жанр игр, включающий в себя все жанры.</p>
+                <p>Такие игры имеют продвинутый сюжет, непосредственную возможность влияния игроками на этот сюжет. Широкую свободу игрового взаимодействия как в онлайн, так и в живом мире.</p>
+            </div>
+            <h2 class="tut-title">
+                Что ещё не умеет "Мастер ролевых игр"? (но я думаю о возможности добавления)
+            </h2>
+            <div class="tut-header">
+                <p>1. <span>Система администрирования и слежения за игрой</span></p>
+            </div>
+            <div class="tut-link">
+                <p>Просмотр в реальном времени местонахождение игроков в игре.</p>
+                <p>Просмотр профилей игроков и их редактирование.</p>
+                <p>Модерация.</p>
+            </div>
+            <div class="tut-header">
+                <p>2. <span>Сохранение и вывод статистики об игровом процессе</span></p>
+            </div>
+            <div class="tut-link">
+                <p>Статистика вхождения игроков в игру и нагрузки на сервер.</p>
+                <p>Вывод всех маршрутов по времени и тепловые карты перемещения игроков в игре.</p>
+                <p>Использования диалоговой системы. Какой % выбрал какой пункт диалога.</p>
+            </div>
+            <div class="tut-header">
+                <p>3. <span>Создание чатов / новостных лент / форумов внутри игры</span></p>
+            </div>
+            <div class="tut-link">
+                <p>Создание внутренних пространств для общения игроков в игре.</p>
+                <p>Можно создавать приватные чаты, когда в игре нужна анонимность при необходимости связаться между игроками.</p>
+                <p>Или всеобщие новостные ленты, например для эмуляции журналов и газет.</p>
+            </div>
+            <div class="tut-header">
+                <p>4. <span>Видео вставки</span></p>
+            </div>
+            <div class="tut-link">
+                <p>Воспризведение музыки или видео файлов (необходимые для выполнения квестов).</p>
+            </div>
+<!--            <div class="width800">
+                <h2 class="tut-title">
+                    Cоздаем прогулочный квест
+                </h2>
+                <div class="tut-header">
+                    1. Как создать простейший проект с картой <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/cJnM7fesSRw?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    2. Как опубликовать проект <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/z_PXXgHj47E?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    3. Как создать сообщение-завязку и вкладку с информацией <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/ulCQR0xikL4?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    4. Как создать инвентарь и предметы <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/uOfzd0ySLzo?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    5. Как создать точки на карте <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/r3afrUQVn_U?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    6. Клонирование точек <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/iB-zUG6cqWU?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    7. Как создать оповещение игрока <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/tjwtM8-3gJo?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    8. Активация и деактивация точек <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/GmCGjvc1SWA?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    9. Как создать проверку пароля <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/PN66YrKtqBg?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    10. Передача параметров в оповещения <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/9GbbHMwooiw?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    11. Непропадающая точка при деактивации <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/VSWxF0__KCA?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    12. Сохранение текущего состояния окна диалога <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/Hs28rrCQ38s?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+                <div class="tut-header">
+                    13. Вывод ошибок в проверке пароля <img class="tut-play" src="/admin/play.png" />
+                </div>
+                <div class="tut-link">
+                    <div class="tut-frame">
+                        <iframe src="https://www.youtube.com/embed/JBr2_uhu6Ss?enablejsapi=1" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    {% include "parts/account.html" %}
+    <div id="modal" class="modal hidden"></div>
+  </body>
+</html>

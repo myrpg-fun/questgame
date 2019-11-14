@@ -1,0 +1,30 @@
+<div class="toolbar">
+    <div class="toolbar-maxwidth">
+        <div class="toolbar-inner">
+            <a href="/" class="tab-link{% if page == 'idx' %} active{% endif %}">
+                <i class="icon ion-home"></i>
+                <span class="tabbar-label">Игры</span>
+            </a>
+            <a href="/project" class="tab-link auth-logout{% if page == 'project' %} active{% endif %}{% if user == null %} hide{% endif %}">
+                <i class="icon ion-hammer"></i>
+                <span class="tabbar-label">Создать игру</span>
+            </a>
+            <a href="/tutorial" class="tab-link {% if page == 'tutorial' %} active{% endif %}">
+                <i class="icon ion-help"></i>
+                <span class="tabbar-label">О проекте</span>
+            </a>
+            <a href="/account" class="tab-link auth-logout{% if user == null %} hide{% endif %}">
+                <img class="icon account-icon" />
+                <span class="tabbar-label account-name"></span>
+            </a>    
+            <a href="/register" class="tab-link auth-login{% if user %} hide{% endif %}">
+                <i class="icon ion-paper-airplane"></i>
+                <span class="tabbar-label">Регистрация</span>
+            </a>    
+            <a href="/login" class="tab-link auth-login{% if user %} hide{% endif %}">
+                <i class="icon ion-key"></i>
+                <span class="tabbar-label">Вход</span>
+            </a>    
+        </div>
+    </div>
+</div>

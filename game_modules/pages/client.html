@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <title>MyRPG игра</title>
+    <link rel="icon" type="image/png" href="/i/favicon3.png">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="/css/client.css" rel="stylesheet" type="text/css">
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/ionicons.min.css" type="text/css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key={{config.googlekey}}"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/qrcode/instascan.min.js"></script>
+    <script src="/js/zz.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/uuid.js"></script>
+    <script src="/js/scheme/scheme.js"></script>
+    <script src="/js/scheme/collection.js"></script>
+    <script src="/js/scheme/field.js"></script>
+    <script src="/js/scheme/group.js"></script>
+    <script src="/js/scheme/modal.js"></script>
+    <script src="/j/client.js"></script>
+    <script>
+        $(document).ready(function(){
+            var socket = io();
+            var auth = new Authorization(socket);
+            client.p = {
+                a:'-', s:'-'
+            };
+            
+            var cerr = console.error;
+            
+            console.error = function() {
+                var msg = (arguments[0] instanceof Error?
+                    arguments[0].stack:
+                    new Error([].slice.call(arguments).join(' ')).stack
+                ).toString()+"\n";
+
+                socket.emit('js-error', {error: msg});
+
+                // additionaly log
+                cerr.apply(this, arguments);
+            };
+            
+            client.setTimeout = function(fn, time){
+                return window.setTimeout(function(){
+                    try{
+                        fn();
+                    }catch(e){
+                        console.error(e);
+                    }
+                }, time);
+            };
+            
+            client.serverTimeOffset = 0;
+            var to = 0;
+            var wt = 0;
+            var minp = 50000;
+            var pingtimer = null;
+            $('#ping img').hide();
+            socket.on('ping-start', function(msg){
+                socket.emit('ping-pong', msg);
+                to = msg-Date.now();
+                wt = Date.now();
+            });
+            socket.on('ping-end', function(ping){
+                wt = Date.now()-wt;
+                
+                if (minp > ping){
+                    minp = ping;
+                    client.serverTimeOffset = to + ping/2;
+                }
+                
+                $('#ping img').hide();
+                if (ping > 500){
+                    $('#ping img.pr-ping2').show();
+                }else if (ping > 200){
+                    $('#ping img.pr-ping1').show();
+                }
+                
+                if (client.p.a > 50){
+                    $('#ping img.pr-gps2').show();
+                }else if (client.p.a > 20){
+                    $('#ping img.pr-gps1').show();
+                }
+                //$('#ping').html(msg+' ms<br/>acc: '+client.p.a);
+                
+                clearTimeout(pingtimer);
+                
+                pingtimer = setTimeout(function(){
+                    $('#ping img.pr-ping2').show();
+                    $('#ping img.pr-ping1').hide();
+                }, 6000);
+            });
+
+            $('#ping img.pr-ping2').click(function(){
+                client.alert("Связь с интернетом пропала", "", "Ок", "red");
+            });
+
+            $('#ping img.pr-ping1').click(function(){
+                client.alert("Слабо ловит интернет", "", "Ок", "yellow");
+            });
+
+            $('#ping img.pr-gps2').click(function(){
+                client.alert("Связь со спутником GPS пропала", "Возможно вы забыли включить GPS", "Ок", "red");
+            });
+
+            $('#ping img.pr-gps1').click(function(){
+                client.alert("Слабый сигнал GPS для опредедение местоположения игрока", "", "Ок", "yellow");
+            });
+
+            var Modal = new client.ModalDialog($('#dialog'), false);
+            client.modal = Modal;
+            client.notify = new client.ModalDialog($('#notify'), true);
+            client.mapoverlay = new client.ModalDialog($('#mapoverlay'), false);
+            
+            client.tabs = new client.Windows($('.toolbar-inner'), $('body'));
+            
+            authDOMinit(auth, Modal);
+
+            auth.on('logout', function(){
+                $('a[href="/login"]').click();
+            });
+            
+            var watcher = (new SocketWatcher());
+            auth.on('login-action', function(){
+                watcher.reconnect();
+            });
+            
+            watcher.watcher(client.watcher).startReceiveSocket(socket, '{{id}}');
+            
+            $('.account-cell.home').click(function(){
+                window.open('/', '_self');
+            });
+        });
+    </script>
+  </head>
+    <body>
+    <div class="toolbar">
+        <div class="toolbar-maxwidth">
+            <div class="toolbar-inner">
+                <a href="/account" class="tab-link auth-logout">
+                    <img class="icon account-icon" />
+                    <span class="tabbar-label account-name"></span>
+                </a>    
+                <a href="/register" class="tab-link auth-login">
+                    <i class="icon ion-paper-airplane"></i>
+                    <span class="tabbar-label">Регистрация</span>
+                </a>    
+                <a href="/login" class="tab-link auth-login">
+                    <i class="icon ion-key"></i>
+                    <span class="tabbar-label">Вход</span>
+                </a>    
+            </div>
+        </div>
+    </div>
+    <div class="page-content account hide">
+        <div class="account-rows">
+            <div class="account-cell">
+                <i class="icon ion-android-sync"></i>
+                <span class="tabbar-label">Сменить<br />пароль</span>
+            </div>
+            <div class="account-cell">
+                <i class="icon ion-monitor"></i>
+                <span class="tabbar-label">Полноэкранный<br />режим</span>
+            </div>
+            <div class="account-cell home">
+                <i class="icon ion-home"></i>
+                <span class="tabbar-label">Выйти<br />из игры</span>
+            </div>
+        </div>
+        <div class="row no-gutter no-space">
+            {% for prg in usess %}<a href="/s/{{ prg.session_id }}" class="col-50 tablet-25">
+                <span class="project">
+                    <span class="mg"><span class="image" style="background-image:url({{ prg.thumb }})"></span></span><span class="title">{{ prg.name }}</span>
+                </span>
+            </a>{% endfor %}
+        </div>
+    </div>
+    <div id="logs" class="logs hidden"></div>
+    <div id="modal" class="modal hidden"></div>
+    <div id="notify" class="notify-dialog hidden"></div>
+    <div id="dialog" class="modal-dialog hidden"></div>
+    <div id="mapoverlay" class="mapoverlay-dialog hidden"></div>
+    <div id="ping">
+        <img src="/admin/gps-problem1.png" class="pr-gps1" />
+        <img src="/admin/gps-problem2.png" class="pr-gps2" />
+        <img src="/admin/connection-problem1.png" class="pr-ping1 red" />
+        <img src="/admin/connection-problem2.png" class="pr-ping2 red" />
+    </div>
+    </body>
+</html>

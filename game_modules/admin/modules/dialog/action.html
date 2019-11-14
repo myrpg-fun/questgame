@@ -1,0 +1,85 @@
+    <script type="text/html" id="DialogPlayerOpenAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Открыть игроку диалог <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-help">
+                <h5>Открыть игроку интерфейс в виде диалога</h5>
+                <p>Открывает <strong>игроку</strong> заданый <strong>интерфейс</strong> в виде диалога.</p>
+                <p>Если у игрока уже открыт диалог, то он закроется и на его место откроется интерфейс.</p>
+            </div>
+            <div class="blk-field"><span class="label long blki-playername">Выбрать игрока</span><span class="link link-player"></span></div>
+            <div class="blk-field"><span class="label long blki-dialogname">Выбрать интерфейс</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-dialog"></span></div>
+            <div class="blk-classfields"></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="DialogPlayerCloseAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Закрыть игроку диалог <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-help">
+                <h5>Закрывает игроку открытый диалога</h5>
+                <p>Закрывает <strong>игроку</strong> текущий диалог.</p>
+            </div>
+            <div class="blk-field"><span class="label long blki-playername">Выбрать игрока</span><span class="link link-player"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="DialogFieldChangeDialogAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Заменить поле интерфейса <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-help">
+                <h5>Заменить поле интерфейса</h5>
+                <p>В выбранном <strong>интерфейсе</strong> находит поле с <strong>полем ID</strong> и заменяет неё <strong>новыи интерфейсом</strong>.</p>
+            </div>
+            <span class="blk-hint">Интерфейс с полем</span>
+            <div class="blk-field"><span class="label long blki-dialogname">Выбрать интерфейс</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-dialog"></span></div>
+            <span class="blk-hint">Заменить новым интерфейсом</span>
+            <div class="blk-field"><span class="label long blki-changename">Выбрать новый интерфейс</span><span class="edit link-editch"><i class="icon ion-compose"></i></span><span class="link link-change"></span></div>
+            <div class="blk-classfields"></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="DialogFieldChangeTextAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Заменить поле текстом<span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-help">
+                <h5>Заменить текст в поле интерфейса</h5>
+                <p>В выбранном <strong>интерфейсе</strong> заменяет текущий текст с <strong>полем ID</strong> на <strong>новый текст</strong>.</p>
+            </div>
+            <span class="blk-hint">Интерфейс с полем</span>
+            <div class="blk-field"><span class="label long blki-dialogname">Выбрать интерфейс</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-dialog"></span></div>
+            <span class="blk-hint">Найденное поле</span>
+            <div class="blk-field"><span class="label">ID поля</span><input class="blki-name" /></div>
+            <span class="blk-hint">Заменить текстом</span>
+            <div class="blk-field blk-ctrfld">
+                <span class="label text">Текст</span><input type="text" class="blki-text text" />
+                <span class="label long blki-textname object">Выбрать текст</span><span class="link link-text"></span>
+            </div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="DialogMapOpenAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Показать интерфейс над картой <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-help">
+                <h5>Показать игроку интерфейс над картой</h5>
+                <p>Показывает над картой <strong>игроку</strong> заданый <strong>интерфейс</strong>.</p>
+                <p>Если у игрока уже открыт диалог, то он закроется и на его место откроется интерфейс.</p>
+            </div>
+            <div class="blk-field"><span class="label long blki-playername">Выбрать игрока</span><span class="link link-player"></span></div>
+            <div class="blk-field"><span class="label long blki-dialogname">Выбрать интерфейс</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-dialog"></span></div>
+            <div class="blk-classfields"></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="DialogMapCloseAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Скрыть интерфейс над картой <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-help">
+                <h5>Скрывает игроку открытый диалога</h5>
+                <p>Скрывает <strong>игроку</strong> текущий диалог.</p>
+            </div>
+            <div class="blk-field"><span class="label long blki-playername">Выбрать игрока</span><span class="link link-player"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    

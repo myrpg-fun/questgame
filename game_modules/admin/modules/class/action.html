@@ -1,0 +1,109 @@
+    <script type="text/html" id="ObjectCreateAction">
+        <div class="blk-block sortable">
+            <div class="blk-header redvalue action">Создать новый объект <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label">Название</span><input class="blki-name" /></div>
+<!--            <div class="blk-field"><span class="label long blki-group">Группы</span><span class="link link-group"></span></div>-->
+            <div class="blk-field"><span class="label long blki-classname">Класс</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-class"></span></div>
+            <div class="blk-classfields"></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectFindAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Найти объекты по параметрам <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-classname">Класс</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-class"></span></div>
+            <div class="blk-classfields"></div>
+            <div class="blk-field"><span class="label long">Каждый найденный объект</span><span class="link link-action"></span></div>
+            <div class="blk-field"><span class="label long">Объект не найден</span><span class="link link-notfound"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectSetAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Сохранить в объект <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-objectname">Объект</span><span class="edit link-oedit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <div class="blk-classfields"></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectUseAction">
+        <div class="blk-block sortable">
+            <div class="blk-header redvalue action">Использовать объект <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-classname">Класс</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-class"></span></div>
+            <div class="blk-field"><span class="label long blki-objectname">Объект</span><span class="edit link-oedit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectDeleteAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Удалить объект <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-objectname">Объект</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectRunTriggerAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Запустить триггер у объекта <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label long blki-triggername">Триггер</span><span class="edit link-tedit"><i class="icon ion-compose"></i></span><span class="link link-trigger"></span></div>
+            <div class="blk-field"><span class="label long blki-objectname">Объект</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectAddCollectionAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Добавить объект в коллекции <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <span class="blk-hint">Объект</span>
+            <div class="blk-field"><span class="label long blki-objectname">Выбрать игрока</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <span class="blk-hint">Добавить в коллекции</span>
+            <div class="blk-field"><span class="label long blki-group">Коллекции</span><span class="link link-group"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectRemoveCollectionAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Удалить объект из коллекций <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <span class="blk-hint">Объект</span>
+            <div class="blk-field"><span class="label long blki-objectname">Выбрать игрока</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <span class="blk-hint">Удалить из коллекций</span>
+            <div class="blk-field"><span class="label long blki-group">Коллекции</span><span class="link link-group"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectTestCollectionAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Объект в коллекции?<span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <span class="blk-hint">Объект</span>
+            <div class="blk-field"><span class="label long blki-objectname">Выбрать игрока</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <span class="blk-hint">Найти в коллекции</span>
+            <div class="blk-field"><span class="label long blki-group">Коллекции</span><span class="link link-group"></span></div>
+            <div class="blk-field"><span class="label long">Да</span><span class="link link-yes"></span></div>
+            <div class="blk-field"><span class="label long">Нет</span><span class="link link-no"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ObjectTestAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Объекты равны?<span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <span class="blk-hint">Класс</span>
+            <div class="blk-field"><span class="label long blki-classname">Класс</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-class"></span></div>
+            <span class="blk-hint">Объект</span>
+            <div class="blk-field"><span class="label long blki-objectname">Выбрать объект</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <span class="blk-hint">Объект 2</span>
+            <div class="blk-field"><span class="label long blki-object2name">Выбрать объект</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object2"></span></div>
+            <div class="blk-field"><span class="label long">Равны</span><span class="link link-yes"></span></div>
+            <div class="blk-field"><span class="label long">Нет</span><span class="link link-no"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>
+    <script type="text/html" id="CollectionTestAction">
+        <div class="blk-block sortable">
+            <div class="blk-header red action">Коллекции равны?<span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <span class="blk-hint">Объект</span>
+            <div class="blk-field"><span class="label long blki-objectname">Выбрать коллекцию</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object"></span></div>
+            <span class="blk-hint">Объект 2</span>
+            <div class="blk-field"><span class="label long blki-object2name">Выбрать коллекцию</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-object2"></span></div>
+            <div class="blk-field"><span class="label long">Равны</span><span class="link link-yes"></span></div>
+            <div class="blk-field"><span class="label long">Нет</span><span class="link link-no"></span></div>
+            <div class="blk-errors"></div>
+        </div>
+    </script>

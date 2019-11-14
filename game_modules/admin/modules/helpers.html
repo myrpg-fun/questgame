@@ -1,0 +1,171 @@
+    <script type="text/html" id="SchemeWindowTpl"><div class="fld-container"></div></script>
+    <script type="text/html" id="UploadButtonFieldTpl">
+        <div class="blk-block blk-block-transparent">
+            <div class="blk-field create-new upload-new"><span class="blki-name"></span><span class="link link-new"></span></div>
+        </div>
+        <input class="blki-upload" type="file" name="uploadfiles[]" multiple="multiple" accept="" style="display:none" />
+    </script>
+    <script type="text/html" id="HeaderField">
+        <div class="blk-separator"><span class="blki-name"></span></div>
+    </script>
+    <script type="text/html" id="CreateButtonFieldTpl">
+        <div class="blk-block blk-block-transparent">
+            <div class="blk-field create-new"><span class="blki-name"></span><span class="link link-new"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="CreateCopyButtonFieldTpl">
+        <div class="blk-block blk-block-transparent">
+            <div class="blk-field create-new"><span class="blki-name"></span><span class="link link-copy icon ion-ios-browsers-outline"></span><span class="link link-new"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="PasteButton">
+        <div class="blk-select">
+            <div class="blk-block sortable">
+                <div class="blk-header lightblue action">Вставить скопированные (<span class="blk-count">0</span>) действия</div>
+                <div class="blk-help">
+                    <h5>Вставить скопированные действия</h5>
+                    <p>.</p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="CreateButtonClassFieldTpl">
+        <div class="blk-list-separator"></div>
+        <div class="blk-block blk-block-transparent">
+            <div class="blk-field create-new"><span class="blki-name"></span><span class="link link-new"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="CreateButtonLocalsFieldTpl">
+        <div class="blk-field blk-createlocals darkyellow"><span class="label arg-margin blki-name"></span><span class="link link-new"></span></div>
+    </script>
+    <script type="text/html" id="SelectButtonFieldTpl">
+        <div class="blk-select"></div>
+    </script>
+    <script type="text/html" id="SelectField">
+        <div class="blk-selectfield"></div>
+    </script>
+    <script type="text/html" id="ArgFieldRemoveTpl">
+        <div class="blk-field"><span class="arg-link"></span><span class="label arg-margin"><input class="arg-input blki-name" /></span> <span class="right-remove remove">&#x2716;</span></div>
+    </script>
+    <script type="text/html" id="ArgFieldTpl">
+        <div class="blk-field"><span class="arg-link"></span><span class="label arg-margin"><input class="arg-input blki-name" /></span></div>
+    </script>
+    <script type="text/html" id="SelectArgBlock">
+        <div class="blk-block blk-selectlocals">
+            <div class="blk-field"><span class="label long blki-name"></span><span class="link"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="ArgSelectFieldTpl">
+        <div class="blk-block blk-selectlocals">
+            <div class="blk-field"><span class="label long blki-name"></span><span class="link"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="ArgValueSetSelector">
+        <div class="blk-block blk-valuelocals">
+            <div class="blk-field"><span class="label long">Задать значение в ручную</span></div>
+        </div>
+    </script>
+    <script type="text/html" id="ArgValueCreateSelector">
+        <div class="blk-block blk-valuelocals">
+            <div class="blk-field"><span class="label long">Значение задаётся при создании</span></div>
+        </div>
+    </script>
+    <script type="text/html" id="ArgValueNoRandomSelector">
+        <div class="blk-block blk-valuelocals">
+            <div class="blk-field"><span class="label long">Все элементы</span></div>
+        </div>
+    </script>
+    <script type="text/html" id="ArgValueNotUseSelector">
+        <div class="blk-block blk-valuelocals">
+            <div class="blk-field"><span class="label long">Не участвует в поиске</span></div>
+        </div>
+    </script>
+    <script type="text/html" id="ActionArgsFieldTpl">
+        <div class="blk-block yellowgreen">
+            <div class="blk-list-locals"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ActionArgsFieldDarkTpl">
+        <div class="blk-block darkyellow">
+            <div class="blk-list-locals"></div>
+        </div>
+    </script>
+    <script type="text/html" id="ActionArgsAddFieldTpl">
+        <div class="blk-block yellowgreen">
+            <div class="blk-list-locals"></div>
+            <div class="blk-field"><span>Добавить аргумент</span><span class="link link-new"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="CustomField">
+        <div class="blk-field"><span class="label long blki-name">Поле</span><span class="edit link-edit"><i class="icon ion-compose"></i></span><span class="link link-open"></span></div>
+    </script>
+    <script type="text/html" id="GroupBlkTpl">
+        <div class="blk-block link-opengroup">
+            <div class="blk-header purple"><span class="blki-name"></span><span class="open">&#x25BC;</span></div>
+        </div>
+        <div class="blk-list-hidden"><div class="blk-list"></div></div>
+    </script>
+    <script type="text/html" id="GroupBlockInTpl">
+        <div class="blk-block">
+            <div class="blk-field"><input class="blki-name" /></div>
+        </div>
+    </script>
+    <script type="text/html" id="CreateNewGroupTpl">
+        <div class="blk-block">
+            <div class="blk-header purple"><span class="blki-name"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="AddToGroupCollectionBlockTpl">
+        <div class="blk-block">
+            <div class="blk-header purple"><span class="blki-name"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="BlkListTpl">
+        <div class="blk-list"></div>
+    </script>
+    <script type="text/html" id="BlkListSortTpl">
+        <div class="blk-list sortable"></div>
+    </script>
+    <script type="text/html" id="Dummy"><span></span></script>
+    <script type="text/html" id="ObjectThisField">
+        <div class="blk-field"><span class="label long blki-name">Поле</span><span class="link link-open"></span></div>
+    </script>
+    <script type="text/html" id="FlagSelectBlockTpl">
+        <div class="blk-block">
+            <div class="blk-field flag"><i class="icon ion-android-done"></i><span class="blki-name"></span><span class="link link-open"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="FlagSelectOneBlock">
+        <div class="blk-block-item">
+            <div class="blk-field"><span class="blki-name"></span><span class="link link-open"></span></div>
+        </div>
+    </script>
+    <script type="text/html" id="FlagEditBlock">
+        <div class="blk-block">
+            <div class="blk-header green">Коллекция <span class="righttop"><span class="remove ibtn"><i class="icon ion-trash-a"></i></span></span></span></div>
+            <div class="blk-field"><span class="label">Имя</span><input type="text" class="blki-name" /></div>
+        </div>
+    </script>
+    <script type="text/html" id="ErrorField">
+        <div class="blk-error-field"><i class="icon ion-alert"></i> <span class="error-text"></span></div>
+    </script>
+    <script type="text/html" id="ErrorFieldOpen">
+        <div class="blk-error-field"><i class="icon ion-alert"></i> <span class="error-text"></span><span class="link link-open"></span></div>
+    </script>
+    <script type="text/html" id="FlagEditBlockRO">
+        <div class="blk-block">
+            <div class="blk-header green">Коллекция</div>
+            <div class="blk-field"><span class="label">Имя</span><input type="text" class="blki-name" /></div>
+        </div>
+    </script>
+    <script type="text/html" id="AlertModalTpl">
+        <div class="blk-block big-size">
+            <div class="blk-header green blki-header"></div>
+            <div class="blk-field"><span class="label long blki-message"></span></div>
+            <div class="blk-space"></div>
+            <div class="blk-field">
+                <button class="btn link-close"></button>
+            </div>
+            <div class="blk-footer"></div>
+        </div>
+    </script>

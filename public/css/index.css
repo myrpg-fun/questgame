@@ -1,0 +1,615 @@
+html, body {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: Roboto, Noto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #212121;
+  font-size: 14px;
+  line-height: 1.5;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+a,
+input,
+textarea,
+select {
+  outline: 0;
+}
+a {
+  text-decoration: none;
+  color: #2196f3;
+}
+p {
+  margin: 1em 0;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.row .tablet-25 {
+  width: 25%;
+/*  width: -webkit-calc((100% - 16px*3) / 4);
+  width: calc((100% - 16px*3) / 4);*/
+}
+
+.alpha{
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    width: 2%;
+    font-size: 40px;
+    color: white;
+    font: 100% Tahoma, Verdana, "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+}
+
+.button.disabled{opacity: 0.5}
+.background-index{
+    background-image: url(/admin/road-street-blur-blurred.jpg);
+    background-color: #000717;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: white;
+}
+.background-index2{
+    background-image: url(/admin/bgwhite.jpg);
+    background-color: #000717;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: black;
+}
+.width800{
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 0px auto;
+}
+.background-info-white2{
+    background: rgba(255,255,255,0.9);
+    color: black;
+    padding: 2%;
+    margin-top: 1%;
+    font-size: 18px;
+}
+.info-short{
+    font-size: 16px;
+}
+.h100{height: 100%}
+.row.no-space{
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+.project{
+    display: block;
+    margin: 30px;
+    cursor: pointer;
+    -webkit-transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+    -moz-transition: -moz-box-shadow 0.2s ease, -moz-transform 0.2s ease;
+    -ms-transition: -ms-box-shadow 0.2s ease, -ms-transform 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.project:hover{
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(255,255,255,0.5);
+}
+.project.gold:hover{
+    box-shadow: 0px 0px 5px rgba(218,165,32,0.2);
+}
+.project .stats{
+    position: relative;
+    display: block;
+    padding: 0px 0px 43%;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid rgba(128,128,128,0.3);
+    color: white;
+}
+
+.stats-info{
+    position: absolute;
+    padding: 3%;
+    color: white;
+    font-size: 14px;
+}
+
+.game-title, .header-title{
+    position: relative;
+    margin-left: 1.5%;
+    padding-top: 2.5%;
+    padding-bottom: 1%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 3vw;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255,255,255,0.8);
+    line-height: 1;
+    text-align: center;
+    text-shadow: 
+        0px 0px 2px rgba(0,0,128,1),
+        0px 0px 2px rgba(0,0,128,1),
+        0px 0px 2px rgba(0,0,128,1)
+    ;
+}
+.game-title{
+    font-size: 50px;
+    padding: 10% 0% 1%;
+    margin-left: 0px;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 
+        0px 0px 4px rgba(0,0,128,1),
+        0px 0px 4px rgba(0,0,128,1),
+        0px 0px 4px rgba(0,0,128,1),
+        0px 0px 4px rgba(0,0,128,1),
+        0px 0px 4px rgba(0,0,128,1)
+    ;
+}
+.game-title span{
+    color: #61b9ff;
+}
+.tut-header{
+    position: relative;
+    padding: 0px;
+    margin: 20px 0px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 1;
+    cursor: pointer;
+}
+.tut-header span{
+    font-weight: normal;
+    text-decoration: underline;
+}
+.tut-header a{
+    font-weight: normal;
+    text-decoration: underline;
+}
+.tut-header.selected span{
+    text-decoration: none;
+}
+.no-link{
+    cursor: auto;
+}
+.tut-title{
+    position: relative;
+    padding: 0px;
+    margin: 30px 0px 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+}
+.tut-play{
+    width: 18px;
+    vertical-align: bottom;
+}
+.tut-link{
+    margin-left: 18px;
+    font-weight: lighter;
+    position: relative;
+    display: none;
+}
+.tut-link p{
+    line-height: 1.2;
+    margin: 0px;
+}
+
+.tut-header.selected+.tut-link{
+    display: block;
+}
+.tut-header.selected .tut-play{
+    display: none;
+}
+
+.tut-frame{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56%;
+}
+.tut-frame iframe{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.info-content{
+    margin-bottom: 40px;
+    font-size: 17px;
+    font-weight: lighter;
+}
+.info-content p{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.color-blue{
+    color: #7fafff;
+}
+.info-lighter{
+    font-weight: lighter;
+}
+
+.project .name{
+    position: relative;
+    display: block;
+    width: 94%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+    vertical-align: middle;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255,255,255,1);
+    line-height: 1;
+    text-shadow: 
+        0px 0px 2px rgba(0,0,128,1),
+        0px 0px 2px rgba(0,0,128,1),
+        0px 0px 2px rgba(0,0,128,1)
+    ;
+}
+
+.project .title{
+    position: relative;
+    display: block;
+    width: 94%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+    vertical-align: middle;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255,255,255,1);
+    line-height: 1;
+    text-shadow: 
+        0px 0px 2px rgba(0,0,128,1),
+        0px 0px 2px rgba(0,0,128,1),
+        0px 0px 2px rgba(0,0,128,1)
+    ;
+}
+.project.user{
+    color: rgba(255, 226, 0, 0.8);
+    outline: 2px solid rgba(218,165,32,1);
+}
+.project .title:before{
+    content: '';
+    background: rgba(200,200,255,0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 0%;
+    z-index: -1;
+    -webkit-transition: width 0.2s ease;
+    -moz-transition: width 0.2s ease;
+    -ms-transition: width 0.2s ease;
+    transition: width 0.2s ease;
+}
+.project.gold .title:before{
+    background: rgba(220, 157, 0, 0.3);
+}
+.project:hover .title:before{
+    width: 100%;
+}
+.project .name:before{
+    content: '';
+    background: rgba(200,200,255,0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 0%;
+    z-index: -1;
+    -webkit-transition: width 0.2s ease;
+    -moz-transition: width 0.2s ease;
+    -ms-transition: width 0.2s ease;
+    transition: width 0.2s ease;
+}
+.project:hover .name:before{
+    width: 100%;
+}
+.project .image{
+    display: block;
+    background-size: cover;
+    width: 100%;
+    padding-top: 33%;
+    vertical-align: middle;
+}
+.project .mg{
+    position: relative;
+    display: block;
+}
+
+.project.gold .mg{
+    padding: 2px;
+    background: url(/admin/gold.jpg);
+}
+.project .create{
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex: 1;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 6% 0px;
+    font-size: 1.5vw;
+}
+.project .create.black{
+    background: rgba(0,0,0,0.7);
+}
+
+.project .create .icon{
+    font-size: 3vw;
+}
+
+.project .remove-session{
+    position: absolute;
+    display: block;
+    top: 3px;
+    right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    text-shadow: 1px 1px 0px black;
+}
+
+.modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1500;
+
+/*    padding: 20px;
+    background: white;
+    color: black;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);*/
+    max-width: 100%;
+    max-height: 100%;
+    
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.1s linear, transform 0.1s ease;
+}
+
+.modal > .blk-block{
+    margin: 0px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+}
+
+.modal > .blk-block .blk-field{
+    padding: 0px 20px;
+}
+
+.modal > .blk-block .blk-header{
+    padding: 5px 20px;
+}
+
+.modal > .blk-block .blk-footer{
+    padding-bottom: 10px; 
+}
+
+.modal > .blk-block .blk-space{
+    padding-bottom: 4px; 
+}
+
+.modal.hidden{
+    opacity: 0;
+    transform: scale(0.8);
+    display: none;
+}
+
+.modal-dialog{
+    position: relative;
+    padding: 20px;
+    background: rgba(80,80,80,0.6);
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+    border: 2px solid white;
+}
+
+.modal-dialog .modal-header{
+    font-size: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.modal-dialog .modal-label{
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1;
+    margin-top: 1em;
+}
+
+.modal-dialog .modal-error{
+    position: relative;
+    font-size: 16px;
+    margin-top: 1em;
+    color: #E64A19;
+}
+
+.modal-dialog .modal-input{
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin-top: 0.3em;
+}
+
+.modal-dialog .modal-input input{
+    position: relative;
+    width: 100%;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    border: 0px;
+    border-bottom: 1px solid #aaa;
+}
+
+.modal-button{
+    position: relative;
+    margin-top: 1em;
+}
+
+.modal-button button{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 0px;
+    background: #0d51c3;
+    text-shadow: #083073 1px 1px 1px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.modal-button button:hover,
+.modal-button button:focus {
+    background: #1061ea;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.modal-button button:active {
+    text-shadow: none;
+    padding: 11px 10px 9px;
+}
+
+.hearth{
+    color: #E64A19;
+    font-size: 60px;
+}
+
+#maps{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.zone{
+    text-align: center;
+    margin-left: -24px;
+    margin-top: -24px;
+}
+
+.zone .counter{
+    display: inline-block;
+    font-size: 26px;
+    text-align: center;
+    width: 48px;
+    padding: 9px 0px;
+    height: 30px;
+    background: url(/admin/project.jpg);
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 1px #1c4e6c, -1px -1px 1px #1c4e6c;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+.zone .name{
+    font-size: 14px;
+    color: black;
+}
+
+@media screen and (max-width: 767px) {
+    .game-title{
+       font-size: 25px;
+    }
+ 
+    .tut-title{
+        font-size: 24px;
+    }    
+    
+   .project{
+        margin: 15px;
+    }
+    
+    .project .title{
+        font-size: 4vw;
+    }
+    
+    .project .name{
+        font-size: 80px;
+    }
+ 
+    .stats-info{
+        font-size: 9px;
+    }
+    
+    .header-title{
+        font-size: 6vw;
+    }
+    .row .col-50 {
+      width: 50%;
+    }
+    .project .create{
+        font-size: 3vw;
+    }
+    .project .create .icon{
+        font-size: 6vw;
+    }
+    .alpha{
+        width: 4%;
+    }
+}
