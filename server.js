@@ -53,7 +53,7 @@ var fs = require('fs');
 
 var config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 
-var sslPath = process.env.NODE_ENV === 'development'?'./cert/':'/etc/letsencrypt/live/masterquest.online/';
+var sslPath = './cert/';//process.env.NODE_ENV === 'development'?'./cert/':'/etc/letsencrypt/live/masterquest.online/';
 
 var options = {
   key: fs.readFileSync(sslPath+'privkey.pem'),
